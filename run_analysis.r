@@ -71,3 +71,5 @@ aggregated.test<-aggregate(.~subject+activity, data=slim.test, FUN=mean)
 
 ## combine train and test data into one dataframe
 final.data <- rbind(aggregated.train, aggregated.test)
+
+write.table(final.data, file="finalData.txt")
